@@ -7,7 +7,7 @@ weatherRouter.post('/',async(req,res,next)=>{
     const data=await response.json();
     const sambhav=parseFloat((3.6*parseFloat(data.wind.speed)).toFixed(2));
     console.log(sambhav);
-    res.render('index',{mosum:data.weather[0].description,city:data.name,main:data.main,sambhav});
+    res.render('index',{mosum:data.weather[0].description,city:data.name,main:data.main,wind:sambhav});
 });
 weatherRouter.get('/',async(req,res,next)=>{
     let city='Patna';
