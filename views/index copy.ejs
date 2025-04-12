@@ -69,23 +69,5 @@
   </div>
 
 </body>
-<script>
-  if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(function(position) {
-    const lat = position.coords.latitude;  // Latitude
-    const lon = position.coords.longitude; // Longitude
-
-    // Aap yahan lat aur lon ka use kar sakte ho
-    console.log("Latitude: " + lat);
-    console.log("Longitude: " + lon);
-    window.location.href=`/loc?lat=${lat}&lon=${lon}`;
-  }, function(error) {
-    console.log("Error getting location: " + error.message);
-  });
-} else {
-  console.log("Geolocation is not supported by this browser.");
-}
-
-</script>
 
 </html>
